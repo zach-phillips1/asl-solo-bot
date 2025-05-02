@@ -2,27 +2,31 @@ from dataclasses import dataclass
 from typing import Optional
 from enum import Enum
 
+
 class UnitType(str, Enum):
-    SMC = 'SMC'
-    MMC = 'MMC'
-    SW = 'SW'
-    GUN = 'Gun'
-    VEHICLE = 'Vehicle'
+    SMC = "SMC"
+    MMC = "MMC"
+    SW = "SW"
+    GUN = "Gun"
+    VEHICLE = "Vehicle"
+
 
 class Nationality(str, Enum):
-    GERMAN = 'German'
-    AMERICAN = 'American'
-    BRITISH = 'British'
-    RUSSIAN = 'Russian'
-    JAPANESE = 'Japanese'
+    GERMAN = "German"
+    AMERICAN = "American"
+    BRITISH = "British"
+    RUSSIAN = "Russian"
+    JAPANESE = "Japanese"
+
 
 class ExperienceLevel(str, Enum):
-    ELITE = 'E'
-    FIRST_LINE = '1'
-    SECOND_LINE = '2'
-    GREEN = 'G'
-    CONSCRIPT = 'C'
-    USMC = 'USMC'
+    ELITE = "E"
+    FIRST_LINE = "1"
+    SECOND_LINE = "2"
+    GREEN = "G"
+    CONSCRIPT = "C"
+    USMC = "USMC"
+
 
 @dataclass
 class Unit:
