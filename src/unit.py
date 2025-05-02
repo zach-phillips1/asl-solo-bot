@@ -52,3 +52,55 @@ class Unit:
     is_broken: bool = False
     is_pinned: bool = False
     has_moved: bool = False
+
+    # Fire phase tracking
+    has_fired_first_fire: bool = False
+    has_fired_final_fire: bool = False
+    is_cx: bool = False
+
+    # Unit methods
+    def break_unit(self):
+        self.is_broken = True
+        self.has_moved = False
+        self.is_cx = False  # CX is removed when broken.
+
+    def rally(self):
+        self.is_broken = False
+        self.has_moved = False
+
+    def set_cx(self):
+        self.is_cx = True
+
+    def clear_cx(self):
+        self.is_cx = False
+
+    def mark_first_fire(self):
+        self.has_fired_first_fire = True
+        self.has_fired_final_fire = False
+
+    def mark_final_fire(self):
+        self.has_fired_first_fire = False
+        self.has_fired_final_fire = True
+
+    def reset_fire_markers(self):
+        self.has_fired_first_fire = False
+        self.has_fired_final_fire = False
+
+    def pin(self):
+        self.is_pinned = True
+
+    def unpin(self):
+        self.is_pinned = False
+
+    def mark_moved(self):
+        self.has_moved = True
+
+    def reset_movement(self):
+        self.has_moved = False
+
+    def reset_all_status(self):
+        self.has_moved = False
+        self.has_fired_first_fire = False
+        self.has_fired_final_fire = False
+        self.is_pinned = False
+        self.is_cx = False
