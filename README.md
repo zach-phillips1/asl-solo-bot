@@ -49,21 +49,6 @@ This project may become open source in the future. For now, it is under solo dev
 
 ---
 
-## 📂 Structure
-
-asl-solo-bot/
-├── src/ # Python source code
-│ ├── unit.py
-│ ├── hex.py
-│ └── gamestate.py
-├── tests/ # Unit tests (to be added)
-├── venv/ # Virtual environment (ignored by Git)
-├── .gitignore
-├── README.md
-
-
----
-
 ## 📌 Notes
 
 - This tool is focused on ASLSK, not full ASL.
